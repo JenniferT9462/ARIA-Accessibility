@@ -3,25 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An ARIA tutorial">
     <title>ARIA-Accessibility</title>
 </head>
 <body>
     <h1>ARIA-Accessibility</h1>
-    <h2></h2>
-    <p></p>
-    <p></p>
-
-    <nav>
-        <input type="text">
-        
-        <label for="">
-            <input type="text">
-        </label>
-    </nav>
-
-    <button></button>
     
-    <a href=""></a>
+    <h2>Using aria-label on a input tag</h2>
+    <p>The aria-label should be used to provide a 
+        text alternative to an element that has 
+        no visible text on the screen.</p>
+    <!-- The aria-label should be used to provide a 
+         text alternative to an element that has 
+         no visible text on the screen. -->
+    <input type="text" aria-label="Your email" name="email" placeholder="email address">
+    <!-- The input in the label tags would not require a aria-label -->
+    <h2>If you use a label tag on a input</h2>
+    <p>The input in the label tags would not require a aria-label</p>
+    <label for="user-name" name="user-name">
+        User Name:
+        <input type="text" id="user-name" autocomplete="user name" placeholder="user name">
+    </label>
+
+    <h2>A button with an aria-label attribute</h2>
+    <p>Used to replace an existing label 
+        with more precise information</p>
+    <!-- Used to replace an existing label 
+     with more precise information -->
+    <button aria-label="Send">Send</button>
+    
+    <h2>A link with a role attribute</h2>
+    <p>The button role is for clickable elements that trigger a 
+        response when activated by the user. It tells the screen reader
+        the element is a button.</p>
+    <!--The button role is for clickable elements that trigger a 
+    response when activated by the user. It tells the screen reader
+    the element is a button.-->
+    <a href="#" role="button" style="background-color: purple; color: white; padding: 8px;">Home</a>
+
+    <!--The 'role' attribute makes sure that 
+    a lot more technologies can pick it up. -->
+    <nav role="navigation">
+        
+    </nav>
 
     
 </body>
